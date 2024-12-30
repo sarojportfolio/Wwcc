@@ -1,10 +1,14 @@
 // Replace with your Google Sheet ID and API key
-const SHEET_ID = "your_google_sheet_id"; // Example: "1abcdEFG12345hijkL6789mnopQRS"
-const API_KEY = "your_google_api_key";   // Example: "AIzaSyXXXXXXX"
+const SHEET_ID = "141Ea_xHBXPi6rItn07EiJMrUjVU7m9AFP8HFJi-Dm8I"; // Your Google Sheet ID
+const API_KEY = "AIzaSyC-6zotQucEYLuPsNY-3zwFPnTA_wlgzMs"; // Your Google API key
+
+// Specify the range for data in Sheet2
+const RANGE = "Sheet2!A:F"; // Range for the data in Sheet2 (adjust columns and rows if needed)
+// Example for a different range: "Sheet2!A2:F10" (fetch rows 2 to 10)
 
 // Fetch data from Google Sheets
 async function fetchPlayerStats() {
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1?key=${API_KEY}`;
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`;
   try {
     const response = await fetch(url);
     const data = await response.json();
