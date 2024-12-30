@@ -67,22 +67,28 @@ h3 {
   object-fit: cover;
 }
 
-/* Footer - Team Logo */
-footer {
-  background-color: #2a004b;
-  padding: 30px 0;
-  text-align: center;
+/* Team Logo in Player Card */
+.team-logo-container {
+  margin-top: 15px;
 }
 
+.team-logo {
+  width: 400px;  /* Reduced logo size */
+  height: 600px; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the logo fits properly */
+  margin-top: 10px;
+}
+
+/* Team Logo in Footer */
 .footer-container {
-  max-width: 1200px;  /* Adjust width as per design */
-  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .footer-logo {
-  width: 300px;  /* Set the logo size to be large */
-  height: auto;
-  object-fit: contain;  /* Ensures the logo keeps its aspect ratio */
+  width: 60px;  /* Reduced footer logo size */
+  height: 60px; /* Maintain aspect ratio */
+  object-fit: contain;
 }
 
 /* Player Name */
