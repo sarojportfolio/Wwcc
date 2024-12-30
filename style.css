@@ -47,7 +47,7 @@ h3 {
 .player-card {
   background: #2a004b;
   border-radius: 10px;
-  width: 200px;
+  width: 250px;  /* Increased width */
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -55,8 +55,8 @@ h3 {
 }
 
 .player-card img.player-image {
-  width: 100px;
-  height: 140px;
+  width: 120px;  /* Increased image width */
+  height: 160px; /* Increased image height */
   margin-bottom: 10px;
   border-radius: 5px;
   object-fit: cover;
