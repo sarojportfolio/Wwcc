@@ -76,42 +76,41 @@ main {
   max-width: 1200px;
 }
 
-/* Player Card Styling */
+/* Player Card */
 .player-card {
-  background-color: #2e004f;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background: #2a004b;
+  border-radius: 10px;
+  width: 200px;
   padding: 20px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.player-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
 }
 
 .player-card img.player-image {
-  width: 80px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.player-card h3.player-name {
-  font-size: 1.3rem;
+  width: 100px;
+  height: 140px;
   margin-bottom: 10px;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
-.player-card .stats p {
-  font-size: 1rem;
+.player-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ffd700;
+}
+
+.stats {
+  font-size: 14px;
+  color: white;
+}
+
+.stats p {
   margin: 5px 0;
 }
 
-.player-card .stats p span {
+.stats span {
+  color: #00ffcc;
   font-weight: bold;
-  color: #2e004f;
 }
