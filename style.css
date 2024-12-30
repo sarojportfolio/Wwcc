@@ -52,20 +52,6 @@ h3 {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white;
-  opacity: 0; /* Initially hidden */
-  transform: translateY(20px); /* Start with a slight downward translation */
-  animation: fadeInUp 0.6s forwards; /* Fade-in and slide-up animation */
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .player-card img.player-image {
@@ -99,20 +85,6 @@ h3 {
 /* Team Logo in Player Card */
 .team-logo-container {
   margin-top: 15px;
-  opacity: 0; /* Initially hidden */
-  transform: scale(0.8); /* Start with a smaller scale */
-  animation: logoScaleUp 0.6s 0.4s forwards; /* Logo scale-up animation */
-}
-
-@keyframes logoScaleUp {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 .team-logo {
@@ -126,20 +98,6 @@ h3 {
 .footer-container {
   text-align: center;
   margin-top: 20px;
-  opacity: 0; /* Initially hidden */
-  transform: scale(0.8); /* Start with a smaller scale */
-  animation: footerLogoScaleUp 0.6s 0.8s forwards; /* Footer logo scale-up animation */
-}
-
-@keyframes footerLogoScaleUp {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 .footer-logo {
@@ -147,6 +105,7 @@ h3 {
   height: 60px; /* Maintain aspect ratio */
   object-fit: contain;
 }
+
 
 /* Player Name */
 .player-card h3 {
