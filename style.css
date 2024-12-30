@@ -76,13 +76,13 @@ footer {
 }
 
 .footer-container {
-  max-width: 1200px;  /* Adjust width as per design */
+  max-width: 100px;  /* Adjust width as per design */
   margin: 0 auto;
 }
 
 .footer-logo {
   width: 100px;  /* Set the logo size to be large */
-  height: auto;
+  height: 100px;
   object-fit: contain;  /* Ensures the logo keeps its aspect ratio */
 }
 /* Player Name */
