@@ -1,14 +1,23 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a0033, #2d0066);
+  color: white;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  text-align: center;
 }
 
+header {
+  padding: 20px 0;
+  background: linear-gradient(135deg, #240045, #3d006e);
+  color: white;
+  text-align: center;
+}
 /* Body Styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #2e004f;
   color: #333;
   line-height: 1.6;
   padding: 20px;
