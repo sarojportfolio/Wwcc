@@ -1,7 +1,7 @@
 // Google Sheets API configuration
 const SHEET_ID = "141Ea_xHBXPi6rItn07EiJMrUjVU7m9AFP8HFJi-Dm8I"; // Replace with your Google Sheet ID
 const API_KEY = "AIzaSyC-6zotQucEYLuPsNY-3zwFPnTA_wlgzMs"; // Replace with your API key
-const RANGE = "Sheet2!A2:F"; // Adjust to your sheet range
+const RANGE = "BOOYAH TEAM !A2:F"; // Adjust to your sheet range
 
 // Function to fetch player stats from Google Sheets
 async function fetchPlayerStats() {
