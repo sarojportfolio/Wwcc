@@ -1,79 +1,87 @@
-/* General styles */
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #1a1a2e;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a0033, #2d0066);
   color: white;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 header {
-  text-align: center;
   padding: 20px 0;
-  background: linear-gradient(45deg, #2a2a48, #1a1a2e);
-}
-
-header .team-logo {
-  width: 100px;
-  height: auto;
+  background: linear-gradient(135deg, #240045, #3d006e);
+  color: white;
+  text-align: center;
 }
 
 h1 {
+  font-size: 36px;
   margin: 10px 0;
-  font-size: 28px;
-  color: #ffd700; /* Gold color */
+  color: #ffd700;
+  letter-spacing: 2px;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 24px;
+  margin: 5px 0;
   color: #ffffff;
-  margin-top: 5px;
 }
 
-/* Container for the player cards */
+h3 {
+  font-size: 20px;
+  margin: 5px 0;
+  color: #ff6600;
+}
+
+/* Player Card Container */
 .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
+  padding: 30px;
 }
 
-/* Player card styles */
+/* Player Cards */
 .card {
-  background-color: #282846;
+  background: #2a004b;
   border-radius: 10px;
+  width: 220px;
   padding: 20px;
-  width: 200px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card img.player-image {
+  width: 80px;
   height: 120px;
   margin-bottom: 10px;
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .card h3 {
-  margin: 10px 0;
   font-size: 18px;
-  color: #ffd700; /* Gold color */
+  margin: 10px 0;
+  color: #ffd700;
 }
 
-/* Player stats */
 .stat {
-  margin: 10px 0;
+  margin: 8px 0;
+  font-size: 16px;
+  color: white;
 }
 
 .stat span {
+  color: #00ffcc;
   font-weight: bold;
-  color: #00ffcc; /* Cyan color */
 }
 
+/* Footer */
 footer {
-  text-align: center;
-  padding: 10px 0;
-  background: #1a1a2e;
+  background: #1a0033;
   color: #ffffff;
+  padding: 15px 0;
+  font-size: 14px;
 }
