@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a0033, #2d0066);
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  padding: 20px 0;
+  background: linear-gradient(135deg, #240045, #3d006e);
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 10px 0;
+  color: #ffd700;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 5px 0;
+  color: #ff6600;
+}
+
+/* Team Status Section */
+.team-status {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Player Card */
+.player-card {
+  background: #2a004b;
+  border-radius: 10px;
+  width: 200px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+}
+
+.player-card img.player-image {
+  width: 100px;
+  height: 140px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.player-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ffd700;
+}
+
+.stats {
+  font-size: 14px;
+  color: white;
+}
+
+.stats p {
+  margin: 5px 0;
+}
+
+.stats span {
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #1a0033;
+  color: #ffffff;
+  padding: 15px 0;
+  font-size: 14px;
+}
