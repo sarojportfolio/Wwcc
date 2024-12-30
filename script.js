@@ -1,16 +1,15 @@
-// Replace with your Google Sheet ID and API key
-const SHEET_ID = "141Ea_xHBXPi6rItn07EiJMrUjVU7m9AFP8HFJi-Dm8I"; // Your Google Sheet ID
-const API_KEY = "AIzaSyC-6zotQucEYLuPsNY-3zwFPnTA_wlgzMs"; // Your Google API key
+// Google Sheets API URL
+const sheetId = '141Ea_xHBXPi6rItn07EiJMrUjVU7m9AFP8HFJi-Dm8I'; // Your Google Sheet ID
+const range = 'Sheet2!A:F'; // Range (adjust as necessary)
+const apiKey = 'AIzaSyAhytWe5enZPUd0hiiIrAN8ZbhpO4nbcrs'; // Your Google API Key
 
-// Specify the range for data in Sheet2
-const RANGE = "Sheet2!A:F"; // Range for the data in Sheet2 (adjust columns and rows if needed)
-// Example for a different range: "Sheet2!A2:F10" (fetch rows 2 to 10)
+// Construct the Google Sheets API URL dynamically
+const leaderboardUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
 
 // Fetch data from Google Sheets
 async function fetchPlayerStats() {
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`;
   try {
-    const response = await fetch(url);
+    const response = await fetch(leaderboardUrl);
     const data = await response.json();
     return data.values; // Returns array of rows
   } catch (error) {
@@ -57,4 +56,8 @@ async function init() {
   }
 }
 
+// Auto-refresh the data every 1 second
+setInterval(init, 1000); // 1 second (1000 milliseconds)
+
+// Run the function initially when the page loads
 init();
