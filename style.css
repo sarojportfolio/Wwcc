@@ -1,87 +1,94 @@
-/* General Styles */
+/* General page styling */
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #1a0033, #2d0066);
-  color: white;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  text-align: center;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
-  padding: 20px 0;
-  background: linear-gradient(135deg, #240045, #3d006e);
+  background-color: #4CAF50;
   color: white;
+  padding: 10px 20px;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  font-size: 36px;
-  margin: 10px 0;
-  color: #ffd700;
-  letter-spacing: 2px;
-}
-
-h2 {
+  margin: 0;
   font-size: 24px;
-  margin: 5px 0;
-  color: #ffffff;
 }
 
-h3 {
-  font-size: 20px;
-  margin: 5px 0;
-  color: #ff6600;
-}
-
-/* Player Card Container */
-.container {
+/* Main container styling */
+main {
+  padding: 20px;
   display: flex;
   justify-content: center;
+}
+
+.stats-container {
+  display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 30px;
+  justify-content: center;
+  gap: 16px;
+  max-width: 1200px;
 }
 
-/* Player Cards */
+/* Card styling */
 .card {
-  background: #2a004b;
-  border-radius: 10px;
-  width: 220px;
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 240px;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card img.player-image {
-  width: 80px;
-  height: 120px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Player image styling */
+.player-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 12px;
   object-fit: cover;
 }
 
-.card h3 {
+/* Text styling within cards */
+h3 {
+  margin: 12px 0 8px;
   font-size: 18px;
-  margin: 10px 0;
-  color: #ffd700;
 }
 
 .stat {
   margin: 8px 0;
-  font-size: 16px;
-  color: white;
-}
-
-.stat span {
-  color: #00ffcc;
+  font-size: 14px;
   font-weight: bold;
 }
 
-/* Footer */
+.stat span {
+  font-weight: normal;
+  color: #555;
+}
+
+/* Footer styling */
 footer {
-  background: #1a0033;
-  color: #ffffff;
-  padding: 15px 0;
+  background-color: #f1f1f1;
+  color: #666;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
   font-size: 14px;
+}
+
+footer p {
+  margin: 0;
 }
