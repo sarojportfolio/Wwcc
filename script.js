@@ -65,7 +65,7 @@ function updateEventDetails(title, stage, day) {
 // Initialization function
 async function init() {
   // Update event details
-  updateEventDetails("WWCD TEAM STATUS", "GRAND FINALS", "DAY - 3");
+  updateEventDetails("BOOYAH TEAM STATUS", "TEST", "DAY - 1");
 
   // Fetch and render player stats
   const players = await fetchPlayerStats();
