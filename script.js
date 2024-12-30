@@ -3,7 +3,7 @@ const SHEET_ID = "141Ea_xHBXPi6rItn07EiJMrUjVU7m9AFP8HFJi-Dm8I"; // Replace with
 const API_KEY = "AIzaSyC-6zotQucEYLuPsNY-3zwFPnTA_wlgzMs"; // Replace with your API key
 
 // Range for player data in Sheet 2
-const PLAYER_RANGE = "BOOYAH TEAM !A2:F"; // Adjust to your player data range
+const PLAYER_RANGE = "BOOYAH TEAM !A2:G"; // Adjust to your player data range (Added logo column in G)
 
 // Range for event details in Sheet 3
 const EVENT_RANGE = "EVENTMANAGE!A2:C"; // Adjust to your event details range
@@ -24,6 +24,7 @@ async function fetchPlayerStats() {
         damageDealt: row[3] || "0",          // Damage
         avgSurvival: row[4] || "00:00",      // Avg Survival
         image: row[5] || "https://via.placeholder.com/80x120", // Player Image URL
+        teamLogo: row[6] || "https://via.placeholder.com/150"  // Team Logo URL (new column G)
       }));
     } else {
       console.warn("No data found in the specified range.");
@@ -86,6 +87,10 @@ function renderPlayerCards(players) {
         <p>Damage Dealt: <span>${player.damageDealt}</span></p>
         <p>Avg Survival: <span>${player.avgSurvival}</span></p>
       </div>
+      <!-- Add Team Logo Below Player Card -->
+      <div class="team-logo-container">
+        <img src="${player.teamLogo}" alt="${player.name} Team Logo" class="team-logo">
+      </div>
     `;
 
     container.appendChild(card);
@@ -99,6 +104,13 @@ function updateEventDetails(eventName, eventStage, eventDay) {
   document.getElementById("eventDay").textContent = eventDay;
 }
 
+// Function to render team logo in footer
+function renderTeamLogo(logoUrl) {
+  const footerLogo = document.getElementById("teamLogo");
+  footerLogo.src = logoUrl; // Set the team logo in the footer dynamically
+  footerLogo.alt = "Team Logo"; // Alt text for accessibility
+}
+
 // Initialization function
 async function init() {
   // Fetch and render event details
@@ -108,6 +120,10 @@ async function init() {
   // Fetch and render player stats
   const players = await fetchPlayerStats();
   renderPlayerCards(players);
+
+  // Example: Fetching team logo for footer from the first player (adjust if needed)
+  const teamLogoUrl = players.length > 0 ? players[0].teamLogo : "https://via.placeholder.com/150";  // Fallback if no players
+  renderTeamLogo(teamLogoUrl);  // Set the team logo in the footer
 }
 
 // Run the initialization
