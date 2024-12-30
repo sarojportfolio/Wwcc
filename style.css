@@ -47,8 +47,8 @@ h3 {
 .player-card {
   background: #2a004b;
   border-radius: 10px;
-  width: 500px;  /* Increased width for larger card */
-  height: 600px; /* Set a fixed height for the card */
+  width: 350px;  /* Increased width for larger card */
+  height: 350px; /* Set a fixed height for the card */
   padding: 30px; /* Added more padding for a spacious look */
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -61,8 +61,8 @@ h3 {
 
 /* Player Image */
 .player-card img.player-image {
-  width: 160px;  /* Adjusted image width */
-  height: 220px; /* Adjusted image height */
+  width: 110px;  /* Adjusted image width */
+  height: 200px; /* Adjusted image height */
   margin-bottom: 15px;
   border-radius: 5px;
   object-fit: cover;
