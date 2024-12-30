@@ -47,65 +47,43 @@ h3 {
 .player-card {
   background: #2a004b;
   border-radius: 10px;
-  width: 350px;  /* Increased width to 350px */
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  width: 500px;  /* Increased width for larger card */
+  height: 600px; /* Set a fixed height for the card */
+  padding: 30px; /* Added more padding for a spacious look */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* Distribute space between content and stats */
 }
 
+/* Player Image */
 .player-card img.player-image {
-  width: 130px;  /* Adjusted image width */
-  height: 180px; /* Adjusted image height */
-  margin-bottom: 10px;
+  width: 160px;  /* Adjusted image width */
+  height: 220px; /* Adjusted image height */
+  margin-bottom: 15px;
   border-radius: 5px;
   object-fit: cover;
 }
 
-.player-card h3 {
-  font-size: 18px;
-  margin: 10px 0;
-  color: #ffd700;
-}
-
-.stats {
-  font-size: 14px;
-  color: white;
-}
-
-.stats p {
-  margin: 5px 0;
-}
-
-.stats span {
-  color: #00ffcc;
-  font-weight: bold;
-}
-
-/* Team Logo in Player Card */
-.team-logo-container {
-  margin-top: 15px;
-}
-
-.team-logo {
-  width: 400px;  /* Reduced logo size */
-  height: 600px; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the logo fits properly */
-  margin-top: 10px;
-}
-
-/* Team Logo in Footer */
-.footer-container {
+/* Footer - Team Logo */
+footer {
+  background-color: #2a004b;
+  padding: 30px 0;
   text-align: center;
-  margin-top: 20px;
+}
+
+.footer-container {
+  max-width: 1200px;  /* Adjust width as per design */
+  margin: 0 auto;
 }
 
 .footer-logo {
-  width: 60px;  /* Reduced footer logo size */
-  height: 60px; /* Maintain aspect ratio */
-  object-fit: contain;
+  width: 300px;  /* Set the logo size to be large */
+  height: auto;
+  object-fit: contain;  /* Ensures the logo keeps its aspect ratio */
 }
-
 
 /* Player Name */
 .player-card h3 {
