@@ -12,7 +12,6 @@ body {
   color: #333;
   line-height: 1.6;
   padding: 20px;
-  position: relative; /* Ensure the footer stays within bounds */
 }
 
 /* Header Styling */
@@ -101,12 +100,8 @@ footer {
   color: #fff;
   padding: 10px 0;
   margin-top: 20px;
-  overflow: hidden; /* Prevents any content overflow */
-  max-height: 50px; /* Limits the footer height */
-  position: relative; /* Keeps footer placement consistent */
 }
 
 footer p {
   font-size: 0.9rem;
-  display: inline-block; /* Ensures text doesn't overflow */
 }
