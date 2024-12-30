@@ -68,18 +68,6 @@ h3 {
   object-fit: cover;
 }
 
-/* Team Logo in Player Card */
-.team-logo-container {
-  margin-top: 15px;
-}
-
-.team-logo {
-  width: 50px;  /* Reduced logo size */
-  height: 50px; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the logo fits properly */
-  margin-top: 10px;
-}
-
 /* Team Logo in Footer */
 .footer-container {
   text-align: center;
@@ -87,8 +75,8 @@ h3 {
 }
 
 .footer-logo {
-  width: 60px;  /* Reduced footer logo size */
-  height: 60px; /* Maintain aspect ratio */
+  width: 200px;  /* Reduced footer logo size */
+  height: 200px; /* Maintain aspect ratio */
   object-fit: contain;
 }
 /* Player Name */
