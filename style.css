@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #1a0033, #2d0066);
+  background: linear-gradient(135deg, #0a001a, #1c0033);
   color: white;
   margin: 0;
   padding: 0;
@@ -10,26 +10,26 @@ body {
 
 header {
   padding: 20px 0;
-  background: linear-gradient(135deg, #240045, #3d006e);
+  background: linear-gradient(135deg, #330066, #520099);
   color: white;
   text-align: center;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 42px;
   margin: 10px 0;
-  color: #ffd700;
-  letter-spacing: 2px;
+  color: #ffcc00;
+  letter-spacing: 3px;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 30px;
   margin: 5px 0;
   color: #ffffff;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 24px;
   margin: 5px 0;
   color: #ff6600;
 }
@@ -38,46 +38,71 @@ h3 {
 .team-status {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 20px; /* Adjusted padding */
-  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 25px;
+  padding: 40px;
+  flex-wrap: wrap;
 }
 
 /* Player Card */
 .player-card {
-  background: #2a004b;
-  border-radius: 10px;
-  width: 180px; /* Reduced width */
-  padding: 15px; /* Reduced padding */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #2a004b, #4d007d);
+  border-radius: 15px;
+  width: 300px; /* Increased width */
+  padding: 30px; /* Increased padding */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
   text-align: center;
   color: white;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .player-card img.player-image {
   width: 200px; /* Increased width */
-  height: 200px; /* Increased height */
-  margin-bottom: 8px; /* Reduced margin */
-  border-radius: 5px;
+  height: 260px; /* Increased height */
+  margin-bottom: 15px;
+  border-radius: 10px;
   object-fit: cover;
+  border: 3px solid #ffcc00;
 }
 
 .player-card h3 {
-  font-size: 16px; /* Reduced font size */
-  margin: 8px 0;
-  color: #ffd700;
+  font-size: 22px; /* Larger font size */
+  margin: 15px 0;
+  color: #ffcc00;
+  text-transform: uppercase;
 }
 
 .stats {
-  font-size: 12px; /* Reduced font size */
+  font-size: 16px; /* Larger font size */
   color: white;
 }
 
 .stats p {
-  margin: 4px 0; /* Reduced margin */
+  margin: 8px 0;
 }
 
 .stats span {
   color: #00ffcc;
   font-weight: bold;
+}
+
+/* Add animation to cards */
+@keyframes glow {
+  0% {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0px 6px 25px rgba(255, 204, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.player-card {
+  animation: glow 2s infinite;
 }
