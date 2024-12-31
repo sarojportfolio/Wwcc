@@ -38,8 +38,8 @@ h3 {
 .team-status {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 30px;
+  gap: 15px; /* Reduced gap for better fit */
+  padding: 20px; /* Adjusted padding */
   flex-wrap: wrap; /* Ensures responsiveness */
 }
 
@@ -47,34 +47,34 @@ h3 {
 .player-card {
   background: #2a004b;
   border-radius: 10px;
-  width: 200px;
-  padding: 20px;
+  width: 180px; /* Reduced width */
+  padding: 15px; /* Reduced padding */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white;
 }
 
 .player-card img.player-image {
-  width: 100px;
-  height: 140px;
-  margin-bottom: 10px;
+  width: 90px; /* Reduced width */
+  height: 120px; /* Reduced height */
+  margin-bottom: 8px; /* Reduced margin */
   border-radius: 5px;
   object-fit: cover;
 }
 
 .player-card h3 {
-  font-size: 18px;
-  margin: 10px 0;
+  font-size: 16px; /* Reduced font size */
+  margin: 8px 0;
   color: #ffd700;
 }
 
 .stats {
-  font-size: 14px;
+  font-size: 12px; /* Reduced font size */
   color: white;
 }
 
 .stats p {
-  margin: 5px 0;
+  margin: 4px 0; /* Reduced margin */
 }
 
 .stats span {
