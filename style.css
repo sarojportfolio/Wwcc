@@ -38,7 +38,7 @@ h3 {
 .team-status {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Reduced gap for better fit */
+  gap: 15px;
   padding: 20px; /* Adjusted padding */
   flex-wrap: wrap; /* Ensures responsiveness */
 }
@@ -55,8 +55,8 @@ h3 {
 }
 
 .player-card img.player-image {
-  width: 90px; /* Reduced width */
-  height: 120px; /* Reduced height */
+  width: 120px; /* Increased width */
+  height: 160px; /* Increased height */
   margin-bottom: 8px; /* Reduced margin */
   border-radius: 5px;
   object-fit: cover;
