@@ -47,25 +47,41 @@ h3 {
 .player-card {
   background: #2a004b;
   border-radius: 10px;
-  width: 500px;  /* Increased width for larger card */
-  height: 600px; /* Set a fixed height for the card */
-  padding: 30px; /* Added more padding for a spacious look */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  width: 300px; /* Reduced width to make the card smaller */
+  padding: 15px; /* Reduced padding */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;  /* Distribute space between content and stats */
 }
 
-/* Player Image */
 .player-card img.player-image {
-  width: 160px;  /* Adjusted image width */
-  height: 220px; /* Adjusted image height */
-  margin-bottom: 15px;
+  width: 120px; /* Reduced image width */
+  height: 160px; /* Reduced image height */
+  margin-bottom: 10px;
   border-radius: 5px;
   object-fit: cover;
 }
+
+.player-card h3 {
+  font-size: 16px; /* Slightly smaller font size */
+  margin: 8px 0;
+  color: #ffd700;
+}
+
+.stats {
+  font-size: 12px; /* Reduced font size for stats */
+  color: white;
+}
+
+.stats p {
+  margin: 4px 0; /* Adjusted margin for compact spacing */
+}
+
+.stats span {
+  color: #00ffcc;
+  font-weight: bold;
+}
+
 
 /* Team Logo in Player Card */
 .team-logo-container {
