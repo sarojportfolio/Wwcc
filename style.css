@@ -16,20 +16,20 @@ header {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 50px; /* Increased font size */
   margin: 10px 0;
   color: #ffcc00;
   letter-spacing: 3px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 36px; /* Increased font size */
   margin: 5px 0;
   color: #ffffff;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 28px; /* Increased font size */
   margin: 5px 0;
   color: #ff6600;
 }
@@ -70,19 +70,19 @@ h3 {
 }
 
 .player-card h3 {
-  font-size: 22px; /* Larger font size */
+  font-size: 26px; /* Larger font size */
   margin: 15px 0;
   color: #ffcc00;
   text-transform: uppercase;
 }
 
 .stats {
-  font-size: 16px; /* Larger font size */
+  font-size: 18px; /* Larger font size */
   color: white;
 }
 
 .stats p {
-  margin: 8px 0;
+  margin: 12px 0;
 }
 
 .stats span {
