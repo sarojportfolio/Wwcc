@@ -42,6 +42,6 @@ async function fetchData() {
   }
 }
 
-// Initial fetch, then refresh every 1 second
+// Initial fetch, then refresh every 10 second
 fetchData();
-setInterval(fetchData, 1000);
+setInterval(fetchData, 10000);
