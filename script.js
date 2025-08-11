@@ -1,114 +1,47 @@
-// Google Sheets API configuration
-const SHEET_ID = "141Ea_xHBXPi6rItn07EiJMrUjVU7m9AFP8HFJi-Dm8I"; // Replace with your Google Sheet ID
-const API_KEY = "AIzaSyC-6zotQucEYLuPsNY-3zwFPnTA_wlgzMs"; // Replace with your API key
+const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTpPHxcZVyfVJQPZeOpwSdHvLWYfLCBhddV7_Eva61DL75q-oUE0QSne_ds6HlDW9Fy0IMr9h0880Ww/pub?output=csv";
 
-// Range for player data in Sheet 2
-const PLAYER_RANGE = "BOOYAH TEAM !A2:F"; // Adjust to your player data range
+let fetching = false;
 
-// Range for event details in Sheet 3
-const EVENT_RANGE = "EVENTMANAGE!A2:C"; // Adjust to your event details range
-
-// Function to fetch player stats from Google Sheets
-async function fetchPlayerStats() {
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${PLAYER_RANGE}?key=${API_KEY}`;
-  
+async function fetchData() {
+  if (fetching) return;  // prevent overlapping fetches
+  fetching = true;
   try {
-    const response = await fetch(url);
-    const data = await response.json();
+    const res = await fetch(sheetURL);
+    const text = await res.text();
 
-    if (data.values) {
-      return data.values.map(row => ({
-        name: row[0] || "Unknown",           // Player Name
-        totalElims: row[1] || "0",           // Total Elims
-        elimsContribution: row[2] || "0%",   // Elims Contribution (%)
-        damageDealt: row[3] || "0",          // Damage
-        avgSurvival: row[4] || "00:00",      // Avg Survival
-        image: row[5] || "https://via.placeholder.com/80x120", // Player Image URL
-      }));
-    } else {
-      console.warn("No data found in the specified range.");
-      return [];
-    }
-  } catch (error) {
-    console.error("Error fetching data from Google Sheets:", error);
-    return [];
+    // Split into rows and columns
+    let rows = text.trim().split("\n").map(r => r.split(","));
+
+    // Remove header row(s) and blank rows
+    rows = rows.filter(row => row.join("").trim() !== "" && !row[0].includes("PlayerName"));
+
+    // Player A = first data row
+    const playerA = rows[0];
+    document.getElementById("nameA").textContent = playerA[0];
+    document.getElementById("imgA").src = playerA[1] || "defaultA.png";
+    document.getElementById("elimsA").textContent = playerA[2];
+    document.getElementById("knocksA").textContent = playerA[3];
+    document.getElementById("damageA").textContent = playerA[4];
+    document.getElementById("survA").textContent = playerA[5];
+    document.getElementById("throwA").textContent = playerA[6];
+
+    // Player B = second data row
+    const playerB = rows[1];
+    document.getElementById("nameB").textContent = playerB[0];
+    document.getElementById("imgB").src = playerB[1] || "defaultB.png";
+    document.getElementById("elimsB").textContent = playerB[2];
+    document.getElementById("knocksB").textContent = playerB[3];
+    document.getElementById("damageB").textContent = playerB[4];
+    document.getElementById("survB").textContent = playerB[5];
+    document.getElementById("throwB").textContent = playerB[6];
+
+  } catch (err) {
+    console.error("Error fetching sheet data:", err);
+  } finally {
+    fetching = false;
   }
 }
 
-// Function to fetch event details from Google Sheets
-async function fetchEventDetails() {
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${EVENT_RANGE}?key=${API_KEY}`;
-  
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-
-    if (data.values && data.values.length > 0) {
-      const eventData = data.values[0];  // Assuming event details are in the first row
-      return {
-        eventName: eventData[0] || "Event Name",
-        eventStage: eventData[1] || "Stage",
-        eventDay: eventData[2] || "Day"
-      };
-    } else {
-      console.warn("No event data found in the specified range.");
-      return {
-        eventName: "Event Name",
-        eventStage: "Stage",
-        eventDay: "Day"
-      };
-    }
-  } catch (error) {
-    console.error("Error fetching event details from Google Sheets:", error);
-    return {
-      eventName: "Event Name",
-      eventStage: "Stage",
-      eventDay: "Day"
-    };
-  }
-}
-
-// Function to render player cards
-function renderPlayerCards(players) {
-  const container = document.getElementById("teamStatusContainer");
-  container.innerHTML = ""; // Clear existing content
-
-  players.forEach(player => {
-    const card = document.createElement("div");
-    card.classList.add("player-card");
-
-    card.innerHTML = `
-      <img src="${player.image}" alt="${player.name}" class="player-image">
-      <h3 class="player-name">${player.name}</h3>
-      <div class="stats">
-        <p>Total Elims: <span>${player.totalElims}</span></p>
-        <p>Elims Contribution: <span>${player.elimsContribution}</span></p>
-        <p>Damage Dealt: <span>${player.damageDealt}</span></p>
-        <p>Avg Survival: <span>${player.avgSurvival}</span></p>
-      </div>
-    `;
-
-    container.appendChild(card);
-  });
-}
-
-// Function to update event details
-function updateEventDetails(eventName, eventStage, eventDay) {
-  document.getElementById("eventTitle").textContent = eventName;
-  document.getElementById("eventStage").textContent = eventStage;
-  document.getElementById("eventDay").textContent = eventDay;
-}
-
-// Initialization function
-async function init() {
-  // Fetch and render event details
-  const eventDetails = await fetchEventDetails();
-  updateEventDetails(eventDetails.eventName, eventDetails.eventStage, eventDetails.eventDay);
-
-  // Fetch and render player stats
-  const players = await fetchPlayerStats();
-  renderPlayerCards(players);
-}
-
-// Run the initialization
-init();
+// Initial fetch, then refresh every 1 second
+fetchData();
+setInterval(fetchData, 1000);
