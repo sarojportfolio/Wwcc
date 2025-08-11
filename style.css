@@ -1,91 +1,77 @@
-/* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #0a001a, #1c0033);
-  color: white;
   margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-header {
-  padding: 20px 0;
-  background: linear-gradient(135deg, #330066, #520099);
+  background: transparent;
+  font-family: Arial, sans-serif;
   color: white;
-  text-align: center;
+
+  /* Added background image */
+  background-image: url('https://i.postimg.cc/Hs1cYD0H/a498708f-3efc-451c-840c-4bca958625e1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-h1 {
-  font-size: 50px; /* Increased font size */
-  margin: 10px 0;
-  color: #ffcc00;
-  letter-spacing: 3px;
-}
-
-h2 {
-  font-size: 36px; /* Increased font size */
-  margin: 5px 0;
-  color: #ffffff;
-}
-
-h3 {
-  font-size: 28px; /* Increased font size */
-  margin: 5px 0;
-  color: #ff6600;
-}
-
-/* Team Status Section */
-.team-status {
+.hth-container {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 25px;
-  padding: 40px;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
 }
 
-/* Player Card */
-.player-card {
-  background: linear-gradient(135deg, #2a004b, #4d007d);
-  border-radius: 15px;
-  width: 300px; /* Increased width */
-  padding: 30px; /* Increased padding */
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+.player {
+  width: 30%;
   text-align: center;
-  color: white;
-  transform: scale(1);
-  transition: transform 0.3s ease;
 }
 
-.player-card:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-.player-card img.player-image {
-  width: 200px; /* Increased width */
-  height: 260px; /* Increased height */
-  margin-bottom: 15px;
-  border-radius: 10px;
+.player-img {
+  width: 100%;
+  border-radius: 12px;
   object-fit: cover;
-  border: 3px solid #ffcc00;
+  border: 3px solid #FFD700;
 }
 
-.player-card h3 {
-  font-size: 26px; /* Larger font size */
-  margin: 15px 0;
-  color: #ffcc00;
-  text-transform: uppercase;
-}
-
-.stats {
-  font-size: 18px; /* Larger font size */
-  color: white;
-}
-
-.stats p {
-  margin: 12px 0;
-}
-
-.stats span {
-  color: #00ffcc;
+.player-name {
+  font-size: 28px;
   font-weight: bold;
+  margin-top: 10px;
+  color: #FFD700;
+}
+
+.stats-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.stat label {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+.red { background: rgba(255, 0, 0, 0.6); }
+.blue { background: rgba(0, 102, 255, 0.6); }
+.green { background: rgba(0, 255, 128, 0.6); }
+.orange { background: rgba(255, 165, 0, 0.6); }
+.purple { background: rgba(128, 0, 255, 0.6); }
+
+.stat span {
+  min-width: 40px;
+  text-align: center;
 }
