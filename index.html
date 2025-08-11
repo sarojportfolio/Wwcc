@@ -2,29 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BOOYAH Team Status for Grand Finals - Day 3">
-  <title>BOOYAH Team Status</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PUBG Head-to-Head</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="header-container">
-      <h1 id="eventTitle">Event Name</h1>
-      <h2 id="eventStage">Event Stage</h2>
-      <h3 id="eventDay">Event Day</h3>
+  <div class="hth-container">
+    <div class="player player-left">
+      <img id="imgA" class="player-img" src="" alt="Player A">
+      <div id="nameA" class="player-name"></div>
     </div>
-  </header>
 
-  <!-- Main Content Section -->
-  <main>
-    <div class="team-status" id="teamStatusContainer">
-      <!-- Player cards will be dynamically generated here -->
+    <div class="stats-container">
+      <div class="stat red"><span id="elimsA"></span><label>Total Elims</label><span id="elimsB"></span></div>
+      <div class="stat blue"><span id="knocksA"></span><label>Total Knocks</label><span id="knocksB"></span></div>
+      <div class="stat green"><span id="damageA"></span><label>Avg Damage</label><span id="damageB"></span></div>
+      <div class="stat orange"><span id="survA"></span><label>Avg Surv Time</label><span id="survB"></span></div>
+      <div class="stat purple"><span id="throwA"></span><label>Throwables Used</label><span id="throwB"></span></div>
     </div>
-  </main>
 
-  <!-- JavaScript -->
+    <div class="player player-right">
+      <img id="imgB" class="player-img" src="" alt="Player B">
+      <div id="nameB" class="player-name"></div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
